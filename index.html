@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gen IV/V Wondercard Sender Installer</title>
+  <script type="module"
+    src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module">
+  </script>
+  <style>
+    body {
+      background: #101827;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .panel {
+      max-width: 480px;
+      margin: auto;
+      background: #1e293b;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    h1 { color: #93c5fd; }
+    button {
+      background: #2563eb;
+      color: white;
+      border: 0;
+      border-radius: 9px;
+      padding: 15px 30px;
+      font-size: 17px;
+      cursor: pointer;
+    }
+    button:hover { background: #1d4ed8; }
+    p { line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <h1>Gen IV/V Wondercard Sender</h1>
+    <h2>ESP32-S3 Firmware Installer</h2>
+    <p>
+      Connect your ESP32-S3 to your computer
+      using a USB data cable.
+    </p>
+    <p>
+      Use Chrome or Edge to install the firmware.
+    </p>
+
+    <esp-web-install-button manifest="./manifest.json">
+      <button slot="activate">Install Firmware</button>
+      <span slot="unsupported">
+        Please use a browser that supports Web Serial.
+      </span>
+    </esp-web-install-button>
+
+    <p>ESP32-S3 only | Gen IV &amp; Gen V</p>
+  </div>
+</body>
+</html>
